@@ -1,0 +1,31 @@
+# system files
+Thumb.db
+.recycle/*
+.recycle\*
+.DS_Store
+._.DS_Store
+.htaccess
+.idea
+# server specific files
+application/config/database.php
+application/config/constants.php
+application/config/config.php
+application/logs
+files/images/graphs
+files/images/signatures
+files/pdf/batchPrint
+files/pdf/paychecks
+files/pdf/transactionDetails
+files/pdf/reports
+files/tmp
+application/third_party/Form1099/output
+
+# wiki database config file
+w/LocalSettings.php
+w/*
+/nbproject/private/
+
+# sample working files
+tmp/
+tmp/*
+files_upload/*

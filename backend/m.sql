@@ -1,0 +1,18 @@
+ INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '302564');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '304917');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '338629');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '347710');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '350432');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '350437');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '350788');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '351323');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '352613');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '353927');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '354030');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '355439');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '357150');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '358682');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '359606');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '359791');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '362923');
+INSERT INTO `user_store` (`id`, `user_id`, `store_key`) VALUES (NULL, 1, '363790');

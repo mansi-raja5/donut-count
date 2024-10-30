@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Test</title>
+    <script>
+        // Function to make API call
+        function callApi() {
+            fetch('https://mansiraja.tech/api/stores', {
+                method: 'GET', // Change to 'POST' if required
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('apiResponse').textContent = 'Error: ' + error;
+            });
+        }
+
+        let token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNiIsImV4cCI6MTcwNjQ1Njg5MSwia2lkIjoiZG9udXRfY291bnQifQ.dSgSW8q3jDkunji3dQkpxbvOt-CiuZ-i_zkjAbE4Dqw';
+        function userstores() {
+            fetch('https://mansiraja.tech/api/user', {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
+            })
+                .then(response => {
+                    console.log(response); // Log the raw response
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById('apiResponse').textContent = 'Error: ' + error;
+                });
+        }
+
+        function logout() {
+            fetch('https://mansiraja.tech/api/logout', {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer '+ token
+                }
+            })
+                .then(response => {
+                    console.log(response); // Log the raw response
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById('apiResponse').textContent = 'Error: ' + error;
+                });
+        }
+
+
+        function postApi() {
+            const url = 'https://mansiraja.tech/api/login';
+            const data = {
+                "email": "johndoe12@example.com",
+                "password": "mypassword"
+            };
+
+            fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('apiResponse').textContent = 'Error: ' + error;
+            });
+        }
+
+        function postApi1() {
+            const url = 'https://mansiraja.tech/api/register';
+            const data = {
+                "first_name": "John",
+                "last_name": "Doe",
+                "email": "johndoe1234@example.com",
+                "password": "mypassword",
+                "confirm_password": "mypassword",
+                "store_id": "351323,304917",
+                "role": "Employee"
+            };
+
+            fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apiResponse').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('apiResponse').textContent = 'Error: ' + error;
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <h1>API Test Page</h1>
+    <button onclick="callApi()">GET Call API</button>
+    <button onclick="postApi1()">REG Call API</button>
+    <button onclick="postApi()">LOGIN Call API</button>
+    <button onclick="userstores()">User stores</button>
+    <button onclick="logout()">Logout</button>
+
+    <pre id="apiResponse"></pre> <!-- Display API response here -->
+</body>
+</html>

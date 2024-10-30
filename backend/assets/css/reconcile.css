@@ -1,0 +1,265 @@
+.red-color
+{
+    color: red;
+    font-weight: bold;
+}
+#ledger_balance_top .red-color
+{
+    float: right;
+}
+
+.highlight_row,
+.highlight_row td,
+.table-hover>tbody>tr:hover td.highlight_row,
+.table-hover>tbody>tr:hover>td.highlight_row,
+.table-hover>tbody tr>td.highlight_row:hover,
+.table-hover>tbody tr.highlight_row:hover,
+.table-hover>tbody>tr.highlight_row:hover,
+.table-hover>tbody>tr.highlight_row:hover>td
+{
+    cursor: pointer;
+    background-color: #90EE90 !important;
+}
+
+#manual_reconcilation_modal .modal-body {
+    max-height: calc(100vh - 143px);
+    overflow-y: auto;
+}
+
+.dataTables_filter
+{
+    display: none;
+}
+tfoot {
+    display: table-header-group;
+}
+
+.date-display-class
+{
+    text-transform: uppercase;
+}
+
+.top_section_manual_data a,
+.top_section_manual_data input,
+.non-editable
+{
+    pointer-events: none;
+    color: grey;
+}
+
+.reconciled-class,
+.table-hover>tbody>tr:hover td.reconciled-class,
+.table-hover>tbody>tr:hover>td.reconciled-class,
+.table-hover>tbody tr>td.reconciled-class:hover,
+.table-hover>tbody tr.reconciled-class:hover,
+.table-hover>tbody>tr.reconciled-class:hover,
+.table-hover>tbody>tr.reconciled-class:hover>td{
+    cursor: pointer;
+    background: #44e77e !important;
+}
+
+.blue-reconciled-class,
+.table-hover>tbody>tr:hover td.blue-reconciled-class,
+.table-hover>tbody>tr:hover>td.blue-reconciled-class,
+.table-hover>tbody tr>td.blue-reconciled-class:hover,
+.table-hover>tbody tr.blue-reconciled-class:hover,
+.table-hover>tbody>tr.blue-reconciled-class:hover,
+.table-hover>tbody>tr.blue-reconciled-class:hover>td {
+    cursor: pointer;
+    background: #ADDFFF !important;
+}
+
+.adjustment-class,
+.table-hover>tbody>tr:hover td.adjustment-class,
+.table-hover>tbody>tr:hover>td.adjustment-class,
+.table-hover>tbody tr>td.adjustment-class:hover,
+.table-hover>tbody tr.adjustment-class:hover,
+.table-hover>tbody>tr.adjustment-class:hover,
+.table-hover>tbody>tr.adjustment-class:hover>td{
+    cursor: pointer;
+    background:  #D98880 !important;
+}
+
+.orange-reconciled-class,
+.table-hover>tbody>tr:hover td.orange-reconciled-class,
+.table-hover>tbody>tr:hover>td.orange-reconciled-class,
+.table-hover>tbody tr>td.orange-reconciled-class:hover,
+.table-hover>tbody tr.orange-reconciled-class:hover,
+.table-hover>tbody>tr.orange-reconciled-class:hover,
+.table-hover>tbody>tr.orange-reconciled-class:hover>td {
+    cursor: pointer;
+    background: #ecaaea !important;
+}
+
+.gray-reconciled-class,
+.table-hover>tbody>tr:hover td.gray-reconciled-class,
+.table-hover>tbody>tr:hover>td.gray-reconciled-class,
+.table-hover>tbody tr>td.gray-reconciled-class:hover,
+.table-hover>tbody tr.gray-reconciled-class:hover,
+.table-hover>tbody>tr.gray-reconciled-class:hover,
+.table-hover>tbody>tr.gray-reconciled-class:hover>td {
+    cursor: pointer;
+    background: #e2e2e2 !important;
+}
+
+.highlight,
+.table-hover>tbody>tr:hover td.highlight,
+.table-hover>tbody>tr:hover>td.highlight,
+.table-hover>tbody tr>td.highlight:hover,
+.table-hover>tbody tr.highlight:hover,
+.table-hover>tbody>tr.highlight:hover,
+.table-hover>tbody>tr.highlight:hover>td {
+    cursor: pointer;
+    background-color: #FA8072 !important;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.mb0{
+    margin-bottom: 0;
+}
+
+.mp0{
+    margin: 0;
+    padding: 0;
+}
+
+.ledger_div .portlet-body, .bank_div .portlet-body{
+    padding: 0px !important;
+}
+
+.display-none
+{
+    display: none;
+}
+.manual-input{
+    width :100% !important;
+}
+
+#current_bank_entries thead tr th {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.btn-disabled {
+    background-color: gray !important;
+    pointer-events: none;
+    border-radius: 7px !important;
+    border-color: white !important;
+}
+.popover-content{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    max-height: 410px;
+    overflow-y: auto;
+    width: 100%;
+}
+.popover-content tbody tr{
+    background-color: black !important;
+}
+.popover-title {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-bottom : none !important;
+    padding: 7px 14px 17px 14px;
+}
+.close-popover{
+    color: #fff !important;
+}
+.popover
+{
+    border-radius: 5px !important;
+    max-width: 625px;
+}
+.popover.right>.arrow:after {
+    border-right-color: #000 !important;
+}
+.popover.bottom>.arrow:after
+{
+    border-bottom-color: #000 !important;
+}
+.reconciled-info-table th,
+.reconciled-info-table td {
+    padding: 5px;
+}
+#manual_reconcilation_modal .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#manual_reconcilation_modal .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+}
+.fa-icons {
+    margin: 6px 0 6px 5px;
+}
+.fa-danger{
+    color: #ea5460;
+}
+.note-icon
+{
+    font-size: 35px;
+    color: white;
+}
+.color-icon
+{
+    font-size: 30px;
+    color: white;
+    margin: 0 10px;
+}
+.error_border{
+    border: 2px solid red;
+}
+
+.top_section_manual_data table tr td:last-child {
+    display: none;
+}
+
+.table>tfoot>tr>td, .table>tfoot>tr>th{
+    padding: 2px !important;
+}
+
+
+.add_attachment, .comment-modal, .uncomment-modal, .fa-paperclip{ display: none !important; }
+.portlet-fullscreen .add_attachment,
+.portlet-fullscreen .comment-modal,
+.portlet-fullscreen .uncomment-modal,
+.portlet-fullscreen .fa-paperclip
+{ display: block !important; }
+
+.color-row
+{
+    padding: 10px;
+    margin: 10px;
+}
+
+.with-point-diff {
+    border: 3px solid #b51524 !important;
+}
+
+.dataTable {
+    border-collapse: collapse !important;
+}
+
+.tooltip-top-note{
+    float: right;
+}
+
+.with-point-diff .popover-title,
+.with-point-diff .close-popover,
+.with-point-diff .popover-content,
+.with-point-diff .popover-content tbody tr{
+    background-color: #e499a0 !important;
+    color: black !important;
+}
+
+.with-point-diff .popover.bottom>.arrow:after {
+    border-bottom-color: #e499a0 !important;
+}

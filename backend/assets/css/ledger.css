@@ -1,0 +1,44 @@
+    .auto_ledger_view_table td, .checkbook_record_table td {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .auto_ledger_view_table input, .checkbook_record_table input {
+        width: 100%;
+        height: 35px;
+        border: 1px;
+    }
+    .popover-content {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        max-height: 410px;
+        overflow-y: auto;
+        width: 100%;
+    }
+    .popover-content tbody tr {
+        background-color: black !important;
+    }
+    .popover-content tbody td,
+    .popover-content tbody th {
+        padding: 5px !important;
+    }
+    .popover-title {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-bottom: none !important;
+        padding: 7px 14px 17px 14px;
+    }
+    .close-popover {
+        color: #fff !important;
+    }
+    .popover {
+        border-radius: 5px !important;
+        max-width: 625px;
+    }
+    .popover.right>.arrow:after {
+        border-right-color: #000 !important;
+    }
+    .popover.bottom>.arrow:after {
+        border-bottom-color: #000 !important;
+    }

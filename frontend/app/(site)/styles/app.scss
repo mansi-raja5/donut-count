@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// body {
+//   @apply bg-gray-100 text-gray-700;
+// }
+
+.container {
+  @apply max-w-[1320px] mx-auto px-4;
+}
+
+.ant-form-item-label {
+  label {
+    @apply font-semibold text-gray-700 #{!important};
+  }
+}
+
+.form-control {
+  @apply block bg-transparent w-full border-b border-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-heading;
+  &::placeholder {
+    @apply text-gray-600 font-medium;
+  }
+}
+
+.contact .form-control {
+  @apply block bg-transparent w-full border-b border-b-bodyText rounded-none px-0 pt-0 pb-2 focus:outline-none focus:border-mainColor text-bodyText text-base;
+  &::placeholder {
+    @apply text-gray-400 font-medium;
+  }
+}
+
+.ant-form-item-label label {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  ):before {
+  display: none !important;
+}
+
+.ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  ):after {
+  display: inline-block !important;
+  content: "*";
+  @apply text-orange-500 text-sm mt-0.5 ml-1.5 visible;
+}
+
+.ant-select-selector {
+  @apply bg-transparent rounded-lg outline-none hover:border-gray-700 py-2.5 border-gray-500 #{!important};
+
+  .ant-select-selection-placeholder {
+    @apply text-gray-600 font-medium;
+  }
+}
+
+#nprogress {
+  .bar {
+    @apply bg-mainColor;
+    height: 3px;
+  }
+
+  .peg {
+    box-shadow: none;
+  }
+
+  .spinner-icon {
+    @apply border-mainColor;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+// messgag scroll
+.msg_scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.msg_scroll::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+// ant popover
+
+.ant-popover {
+  position: fixed;
+}
+
+.ant-popover .ant-popover-inner {
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.slim-scroll {
+  &::-webkit-scrollbar {
+    width: 2.5px;
+    height: 2.5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.paragraph {
+  @apply text-base text-bodyText;
+}
+
+.ant-breadcrumb-link a {
+  color: #e63e58 !important;
+}
+
+// .ant-select-selector {
+//   height: 48px !important;
+//   border-radius: 4px !important;
+//   font-size: 20px !important;
+//   font: bold;
+// }
+.ant-input-affix-wrapper .ant-input-password {
+  border: none !important;
+}
+.user_select .ant-select-selector {
+  // background-color: blue !important;
+  border: 1px solid #e4e4e4 !important;
+  font: normal;
+  font-size: 16px !important;
+  outline: #f34100 !important;
+  :focus {
+    border: 1px solid #f34100 !important;
+  }
+}
+.ant-select-arrow {
+  @apply mt-[3px] text-bodyText font-bold #{!important};
+}
+
+.ant-select-clear {
+  @apply mt-[3px] text-bodyText font-bold #{!important};
+}
+
+.ant-select-item-option-content {
+  @apply hover:text-mainColor #{!important};
+}
+.ant-select-arrow {
+  transform: translateY(-50%);
+}
+
+.heading_1 {
+  /* // font-family: Gilroy-SemiBold; */
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading_2 {
+  /* // font-family: Gilroy-SemiBold; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.heading_3 {
+  //  font-family: Gilroy-SemiBold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* Heading/H4 */
+.heading_4 {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.ant-radio-wrapper-checked .ant-radio-inner {
+  background-color: #f34100 !important;
+  border: none;
+}
+.dog-swiper-pagination {
+  .swiper-pagination {
+    position: relative;
+    margin-top: 25px;
+    // background-color: #F34100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // bottom: 0;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #f34100 !important;
+    border: #f34100 !important;
+    padding: 6px;
+  }
+}
+
+.ant-picker {
+  border-radius: 0;
+}
+
+/* Assuming you're using CSS */
+
+
+.ant-select-selector {
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 text-gray-700;
+}
+
+.container {
+  @apply max-w-[1320px] mx-auto px-4;
+}
+
+
+.ant-form-item-label {
+  label {
+    @apply font-semibold text-gray-700 #{!important};
+  }
+}
+
+.form-control {
+  @apply block bg-transparent w-full border border-gray-500 rounded-lg px-4 py-3 focus:outline-none focus:border-heading;
+  &::placeholder {
+    @apply text-gray-600 font-medium ;
+  }
+
+}
+
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional):before {
+  display: none !important;
+}
+
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional):after {
+  display: inline-block !important;
+  content: "*";
+  @apply text-orange-500 text-sm mt-0.5 ml-1.5 visible;
+}
+
+
+.ant-select-selector {
+  @apply bg-transparent rounded-lg outline-none hover:border-gray-700 py-2.5 border-gray-500 #{!important};
+
+  .ant-select-selection-placeholder {
+    @apply text-gray-600 font-medium ;
+  }
+}
+
+#nprogress {
+
+  .bar {
+    @apply bg-mainColor;
+    height: 3px;
+  }
+
+  .peg {
+    box-shadow: none;
+  }
+
+  .spinner-icon {
+    @apply border-mainColor;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+/* // messgag scroll  */
+.msg_scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.msg_scroll::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+/* // ant popover  */
+
+.ant-popover{
+  position: fixed;
+  
+}
+
+.ant-popover .ant-popover-inner {
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.slim-scroll {
+  &::-webkit-scrollbar {
+    width: 2.5px;
+    height: 2.5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+.heading_1{
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 38px;
+}
+
+
+.body{
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+
+.heading_5{
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+}
+
+
+.ant-breadcrumb-link a {
+  color: #E63E58 !important;
+
+}
+

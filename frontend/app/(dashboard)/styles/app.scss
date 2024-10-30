@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=nunitoFont+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap");
+
+@import "partials/status";
+
+body {
+  @apply font-nunitoFont;
+}
+.sidebar {
+  @apply w-0 overflow-hidden md:w-[16rem] h-screen fixed left-0 z-10 top-0 bg-white transition-all duration-300 border-r;
+  .title {
+    @apply h-[70px] flex justify-center items-center text-mainColor text-[28px] font-bold font-dela;
+  }
+
+  .menu {
+    li {
+      margin-bottom: 6px;
+    }
+
+    @apply py-8;
+    .nav-menu {
+      @apply uppercase pl-6 pr-2 py-2 text-xs text-gray-300;
+    }
+
+    .nav-link {
+      @apply flex items-center gap-4 pl-6 pr-2 py-2.5 my-2 text-lg text-content hover:text-mainColor font-semibold relative;
+      &.active {
+        @apply text-mainColor bg-[#E48586] bg-opacity-10 border-mainColor border-l-[12px] rounded-md;
+      }
+
+      &.has-arrow::after {
+        content: "";
+        @apply border-r border-b border-gray-300 w-1.5 h-1.5 absolute right-5 top-5 transform -rotate-45 transition-all duration-300 ease-in-out;
+      }
+
+      &.active.has-arrow::after {
+        @apply rotate-45;
+      }
+    }
+
+    .submenu {
+      @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+      .nav-link {
+        @apply py-1.5 text-sm;
+        padding-left: 54px;
+      }
+
+      &.active {
+        @apply max-h-[500px];
+      }
+
+      li:first-child {
+        .nav-link {
+          @apply pt-2.5;
+        }
+      }
+
+      li:last-child {
+        .nav-link {
+          @apply pb-1;
+        }
+      }
+    }
+  }
+
+  &.open {
+    @media screen and (max-width: 768px) {
+      @apply w-[16rem];
+    }
+  }
+}
+
+.sidebar-overlay {
+  @media screen and (max-width: 768px) {
+    @apply fixed hidden left-0 top-0 w-full h-screen bg-black bg-opacity-50;
+    &.open {
+      @apply block;
+      z-index: 8;
+    }
+  }
+}
+
+.header {
+  @apply fixed left-0 md:left-[240px] top-0 right-0 md:h-[120px] h-[100px] bg-white shadow transition-all duration-300;
+}
+
+.content {
+  @apply md:pt-[140px] pt-[100px] md:pl-[270px] transition-all duration-300;
+}
+
+.ant-notification-notice-message {
+  margin-bottom: 0 !important;
+}
+
+.multi {
+  .ant-select-selector {
+    min-height: 38px !important;
+    border-radius: 4px !important;
+  }
+}
+
+.ant-form-item-label {
+  label {
+    @apply text-sm font-medium text-gray-700 #{!important};
+  }
+}
+
+.ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  ):before {
+  display: none !important;
+}
+
+.ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  ):after {
+  display: inline-block;
+  margin-left: 4px;
+  margin-top: 2px;
+  color: #ff4d4f;
+  font-size: 14px;
+  // font-family: Inter, sans-serif;
+  line-height: 1;
+  content: "*";
+  visibility: visible;
+  @apply font-nunitoFont;
+}
+
+.form-input {
+  @apply block w-full outline-0 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 px-3 py-2;
+}
+
+.ant-select {
+  min-height: 40px;
+}
+
+.ant-select-selector {
+  min-height: 40px;
+  @apply block w-full outline-0 border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 px-3 py-1 #{!important};
+}
+.select-year .ant-select-selector {
+  @apply block w-full outline-0 border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 px-3 py-1 lg:h-[40px] overflow-y-clip #{!important};
+}
+
+.ant-select-borderless {
+  .ant-select-selector {
+    border-color: #d1d5db; // Equivalent to Tailwind's border-gray-300
+    &:focus {
+      border-color: #6366f1; // Equivalent to Tailwind's border-indigo-500
+    }
+  }
+}
+
+.ant-picker {
+  width: 100%; // Equivalent to Tailwind's w-full
+  border-radius: 0.375rem; // Equivalent to Tailwind's rounded-md
+  outline: 0;
+  box-shadow: none; // Equivalent to Tailwind's shadow-none
+  border-color: #d1d5db; // Equivalent to Tailwind's border-gray-300
+  &:focus {
+    border-color: #6366f1; // Equivalent to Tailwind's border-indigo-500
+  }
+  &:hover {
+    border-color: #d1d5db; // Equivalent to Tailwind's hover:border-gray-300
+  }
+  min-height: 40px;
+}
+
+.ant-select-arrow {
+  margin-top: 0.5rem; // Equivalent to Tailwind's mt-2
+}
+
+.ant-form-item-explain-error {
+  // font-family: "Inter", sans-serif;
+  font-size: 0.75rem; // Equivalent to Tailwind's text-xs
+  color: #ef4444; // Equivalent to Tailwind's text-red-500
+  margin: 0.25rem 0; // Equivalent to Tailwind's my-1
+  @apply font-nunitoFont;
+}
+
+.ant-modal-content {
+  border-radius: 0.375rem; // Equivalent to Tailwind's rounded
+}
+
+.ant-modal-header {
+  color: #4a5568; // Equivalent to Tailwind's text-gray-700
+  margin-bottom: 1rem; // Equivalent to Tailwind's mb-4
+}
+
+.order table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.order td {
+  @apply border border-[#EAEEF7] text-center lg:text-base text-[12px] py-[18px] text-content;
+}
+
+.order th {
+  @apply bg-[#FCFCFC] py-[14px] text-center lg:text-2xl text-base text-[#8697A8] border border-[#EAEEF7] lg:font-bold font-semibold;
+}
+.progress {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.sales {
+  .ant-radio-wrapper {
+    @apply inline-flex items-center gap-2 border border-[#EAEEF7] rounded-md px-1 py-1;
+  }
+}
+
+.sales {
+  .ant-radio-wrapper span.ant-radio + * {
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    color: var(--1, #44566c);
+    font-family: Nunito Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.recharts-rectangle {
+  border-radius: 50% 50% 0 0 !important;
+}
+.admin_import {
+  .ant-upload {
+    width: 100%;
+  }
+}
+
+.swiper-tabbar {
+  .swiper-slide {
+    overflow: visible;
+    width: auto;
+    white-space: nowrap;
+  }
+}
